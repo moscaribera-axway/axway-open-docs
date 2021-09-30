@@ -165,7 +165,7 @@ You must upgrade each node in your Cassandra cluster individually before moving 
 
 #### Update Cassandra's driver configuration in API Gateway
 
-Before upgrading the Cassandra cluster, you must set Cassandra's driver protocol to version `V3` in your gateways:
+Before upgrading the Cassandra cluster, you must set Cassandra's driver protocol to version `V3` in your gateways. You must update and restart each API Gateway instance individually:
 
 1. Create a file called `jvm.xml` in the following location:
 
@@ -201,7 +201,7 @@ To start upgrading your old installation:
 
 #### Revert Cassandra's driver configuration in API Gateway
 
-Update API Gateway back to use Cassandra's `V4` protocol.
+Update API Gateway back to use Cassandra's `V4` protocol. You must update and restart each API Gateway instance individually:
 
 1. To reconfigure the protocol version on each instance of API Gateway, edit the `INSTALL_DIR/apigateway/groups/GROUP_ID/INSTANCE_ID/conf/jvm.xml` file, and remove the previously set JVM argument.
 
@@ -225,7 +225,7 @@ Attention to the following:
 
 ## Upgrade multi-node multi-datacenter directly to 3.11.11
 
-{{< alert title="Caution" color="warning" >}}Upgrading multi-node environments directly to version 3.11.11 result in downtime of API Gateway and Cassandra.{{< /alert >}}
+{{< alert title="Caution" color="warning" >}}Upgrading multi-node environments directly to version 3.11.11 results in downtime of API Gateway and Cassandra.{{< /alert >}}
 
 To upgrade Apache Cassandra directly to version 3.11.11 in a multi-node or multi-datacenter environment, follow the same steps as for [Single-node](/docs/apim_installation/apigw_upgrade/upgrade_cassandra/#cassandra-upgrade-steps--single-node)) procedure.
 
