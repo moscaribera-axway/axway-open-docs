@@ -42,11 +42,9 @@ No capabilities have been deprecated in this update.
 
 ## End of support notices
 
-### placeholder 3
+### Developer tools on Windows 8.1
 
-<!-- There are no end of support notices in this update.-->
-
-placeholder
+This is a reminder that in February 2022 we will remove support for the installation and update of [developer tools](/docs/apim_installation/apigtw_install/install_dev_tools/) on Windows 8.1
 
 ## Removed features
 
