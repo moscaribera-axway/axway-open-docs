@@ -30,9 +30,9 @@ placeholder
 
 It is important, especially when upgrading from an earlier version, to be aware of the following changes in the behavior or operation of the product in this update, which may impact on your current installation.
 
-### placeholder 2
+### Distributed cache socket connect timeout
 
-placeholder
+A new socket connect timeout is added for distributed cache replicated updates. The default timeout is 500 millisecond and can be changed if required using JVM system property `com.axway.rmi.socket.connect.timeout`, see [System property changes](/docs/apim_reference/system_props/#7.7 February 2022).
 
 ## Deprecated features
 
