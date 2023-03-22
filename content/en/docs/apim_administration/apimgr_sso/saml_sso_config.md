@@ -27,7 +27,7 @@ The following configuration files are used by the API Manager SSO.
 This file defines the Service Provider (SP), the SAML Identity Provider (IdP), and the mappings that can be made by the SAML IdP. In this case, the SP is API Manager.
 
 * Located in your API Gateway instance folder (for example, `INSTALL_DIR/apigateway/groups/group-2/instance-1/conf`).
-* For more information, see [Create the service-provider.xml file](create-the-service-providerxml-file).
+* For more information, see [Create the service-provider.xml file](#create-the-service-providerxml-file).
 
 ### idp.xml (optional)
 
