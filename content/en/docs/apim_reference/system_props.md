@@ -35,7 +35,7 @@ It is best practice to add XML comments as a reminder for what the setting does,
 
 ## List of Java system properties by release
 
-The following table lists the Java system properties that exist in the code and the release they were introduced.
+The following table lists the Java system properties that exist in the code and the release in which they were introduced.
 
 |Release | System property                           | Context                                                        | Description  |
 |---     | ----------------------------------------- | -------------------------------------------------------------- |---           |
