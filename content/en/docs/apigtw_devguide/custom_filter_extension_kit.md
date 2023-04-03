@@ -561,7 +561,7 @@ To test the configuration, follow these steps:
 3. In the **Url** field, enter to send the message to the relative path you configured above.
 4. Click **Run** to send the message to API Gateway.
 
-{{< alert title="Tip" color="secondary" >}}Alternatively, you can test the policy by entering the URL into any web browser.{{< /alert >}}
+{{< alert title="Tip" color="primary" >}}Alternatively, you can test the policy by entering the URL into any web browser.{{< /alert >}}
 
 API Gateway echoes the message back to the client using the **Reflect Message** filter after an instant message has been sent to an account on Google Talk. The following is an example of an instant message that appears on an account on Google Talk. This indicates that the newly added filter has worked successfully.
 
