@@ -72,7 +72,26 @@ There are no end of support notices in this update.
 
 To stay current and align our offerings with customer demand and best practices, Axway might discontinue support for some capabilities. As part of this update, the following features have been removed:
 
-<!-- No features have been removed in this update. -->
+### Sun Access Manager has been retired
+
+Sun Access Manager has been retired in this release. This includes the following Sun Access Manager filters:
+
+* Authorization
+* Log out session
+* Retrieve attributes
+* SSO Token Validation
+* X.509 Certificate Authentication
+  
+These filters will no longer be available to use when creating policies in Policy Studio, so we strongly recommend that you replace them with the [Oracle Access Manager](/docs/apim_policydev/apigw_polref/connector_oam/) filters, or remove them entirely.
+
+This retirement also includes the following:
+
+* The **Access Manager** settings, found in **Server Settings > Security**.
+* The **Sun Access Manager** Repositories, found in **External Connections > Authentication Repositories**. Sun Access Manager repositories can be replaced by Oracle Access Manager repositories.
+
+Existing configurations that use these filters and settings will cause a critical warning when upgraded in Policy Studio or with an upgrade tool such as `projupgrade`.
+
+After this repository is removed, you will still be able to deploy upgraded configuration containing Sun Access Manager; and, updated gateways will continue to run existing deployed configuration, but as a consequence, a warning will be logged in API Gateway trace files and the deploy will always return a fail response.
 
 ### Localization in Policy Studio
 
