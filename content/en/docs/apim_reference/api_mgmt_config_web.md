@@ -65,6 +65,8 @@ For more details on API Portal, see [Administer API Portal](/docs/apim_adminis
 
 * **User registration**: Select whether to enable automatic user registration. This is enabled by default.
 * **Auto-approve user registration**: Select whether automatic approval of user registration requests is enabled. This is enabled by default.
+* **User registration link expiry (minutes)**: A registration email is sent to the user to activate their account. The default activation value is `1440` minutes (`24` hours), starting when the email is sent, and the maximum value is `14400` minutes (`10` days).
+After the set time period has elapsed, the activation becomes invalid and the user will receive an error message if they attempt to activate it. Setting the value of this property to `0` disables the requirement for the user to activate their account.
 * **Auto-approve applications**: Select whether automatic approval of client applications is enabled. This is enabled by default.
 * **Login name regular expression**: Enter a valid regular expression to restrict the login names that you can enter. This does not retrospectively enforce login names. If you change the * default setting, you must update the `loginNameValidationMessage` in `app.config`. Defaults to `[^;,\\/?#<>&;!]{1,}`.
 * **User name regular expression**: Enter a valid regular expression to restrict the user names that you can enter.  This does not retrospectively enforce existing user names. Defaults to `^[\\p{L}\\d .,\'_-]+$`.
