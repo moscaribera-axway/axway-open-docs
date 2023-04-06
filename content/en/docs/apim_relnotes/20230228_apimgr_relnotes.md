@@ -54,7 +54,7 @@ With the release of Axway images in the November 2022 release, API Management d
 
 It is important, especially when upgrading from an earlier version, to be aware of the following changes in the behavior or operation of the product in this update, which may impact your current installation.
 
-### API Gateway preserves the `charset` value configured in the Set Message filter
+### Charset value configured in the Set Message filter is preserved
 
 API Gateway now preserves the configured `charset` property value, with or without quotes, in the `Content-Type` field of the **Set Message** filter. When quotes are present in the `charset` property value, they are preserved, and if quotes are not present, then they are not added by API Gateway.
 
@@ -62,7 +62,7 @@ For backwards compatibility, set `com.axway.apigw.http.contenttype.charset.legac
 
 For more information, see [Set message filter](/docs/apim_policydev/apigw_polref/conversion_common/#set-message-filter) and [System property changes, 7.7 February 2023](/docs/apim_reference/system_props/#77-february-2023).
 
-### API Gateway Via header received-protocol version set to the version used by the upstream sender
+### Via header received-protocol version set to the remote peer version
 
 API Gateway now sets the `Via` header received-protocol version to the client request protocol version, that is, the version used by the upstream sender of the message in conformance with [RFC 9110 Section 7.6.3](https://www.rfc-editor.org/rfc/rfc9110#name-via).
 
@@ -70,9 +70,9 @@ For backwards compatibility, set `com.axway.apigw.http.headers.via.legacy` Java 
 
 For more information, see [System property changes, 7.7 February 2023](/docs/apim_reference/system_props/#77-february-2023).
 
-### Docker Compose security configuration changes in Amplify Analytics Operational Insights
+### Docker Compose security configuration changes in AAOI
 
-The default Amplify Analytics Operational Insights docker compose files have been updated to add resource limits for both CPU and memory. For more information, see [Configure a production setup for Docker compose](/docs/operational_insights/production_setup/op_insights_setup_prod_docker/).
+The default Amplify Analytics Operational Insights (AAOI) docker compose files have been updated to add resource limits for both CPU and memory. For more information, see [Configure a production setup for Docker compose](/docs/operational_insights/production_setup/op_insights_setup_prod_docker/).
 
 <!-- RDAPI-28755 -->
 
