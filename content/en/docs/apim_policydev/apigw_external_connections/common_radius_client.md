@@ -8,11 +8,9 @@
 
 {{< alert title="Note" color="primary" >}}This feature has been deprecated and will be removed in a future release.{{< /alert >}}
 
-The API Gateway provides support for integration with remote systems over the Remote Authentication Dial In User Service (RADIUS) protocol. RADIUS is a client-server network protocol that provides centralized authentication and authorization for clients connecting to remote services. For more details, see the [RADIUS specification](https://www.rfc-editor.org/rfc/rfc2865).
+The API Gateway provides support for integration with remote systems over the Remote Authentication Dial In User Service (RADIUS) protocol over UDP. RADIUS is a client-server network protocol that provides centralized authentication and authorization for clients connecting to remote services. For more details, see the [RADIUS specification](https://www.rfc-editor.org/rfc/rfc2865).
 
-To configure a client connection to a remote server over the RADIUS protocol, under the **Environment Configuration > External Connections** tree node in the Policy Studio, select **RADIUS Clients
-> Add a RADIUS Client**. This topic explains how to configure the settings the **RADIUS Client**
-dialog.
+To configure a client connection to a remote server over the RADIUS protocol, under the **Environment Configuration > External Connections** tree node in the Policy Studio, select **RADIUS Clients > Add a RADIUS Client**. This topic explains how to configure the settings the **RADIUS Client** dialog.
 
 For details on how to configure a RADIUS authentication repository, see [RADIUS repositories](/docs/apim_policydev/apigw_external_connections/common_user_store#radius-repositories).
 
@@ -27,7 +25,7 @@ Enter an appropriate name for the RADIUS client to display in Policy Studio.
 Enter the host name used by the RADIUS client.
 
 **Client port**:
-Enter the port number used by the RADIUS client.
+Enter the port number used by the RADIUS client.  This must be set to ``0``, which will make the API Gateway use a new ephemeral port each restart.
 
 **RADIUS servers**:
 This field displays a list of configured RADIUS servers. To add a server to the list, click **Add**, and complete the following fields:
