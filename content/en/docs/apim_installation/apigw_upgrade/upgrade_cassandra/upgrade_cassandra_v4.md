@@ -6,10 +6,11 @@
   "description": "Upgrade your Cassandra environment from version 3.11.11 to version 4.0.7."
 }
 
-You can only upgrade to Cassandra version `4.0.7` from version `3.11.11`. If your version is earlier than `3.11.11`, see [Upgrade Apache Cassandra to 3.11.11](docs/apim_installation/apigw_upgrade/upgrade_cassanda/upgrade_cassandra_v3/).
+You can only upgrade to Cassandra version `4.0.7` from version `3.11.11`. If your version is earlier than `3.11.11`, see [Upgrade Apache Cassandra to 3.11.11](/docs/apim_installation/apigw_upgrade/upgrade_cassanda/upgrade_cassandra_v3/).
 
 ## Before you start
 
+* You must upgrade your API Gateway to the [February 2023](/docs/apim_relnotes/20230228_apimgr_relnotes/index.html) release, or later, prior to upgrading your Cassandra environment to `4.0.7`.
 * When upgrading either a cluster on a single-datacenter or a multi-datacenter setup, you must avoid any schema changes until the entire cluster has been upgraded to the same version.
 * In multi-datacenter clusters:
 
