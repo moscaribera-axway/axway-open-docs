@@ -36,7 +36,7 @@ You can find the release notes for all service packs on [Axway Support](https://
 |    |Helm use of externalization |Changes in OAuth Login Form path  |-  |
 |    |Amplify Analytics Operational Insights|Traffic Monitor filter behavior change with threat protection  |-  |
 |    |- |API Manager no longer allows exporting front-end APIs as plain text by default  |-  |
-|    |- |New checkbox in the Advanced (SSL) tab of the Connect To URL filter   |-  |
+|    |- |New option in the Connect To URL filter to enabled legacy renegotiation   |-  |
 |    |- |Runtime parameter validation system properties have been replaced with API Manager settings |-  |
 |    |- |EdDSA certificates are supported |-  |
 |**Update**       |**New features and enhancements**        | **Important Changes**   |**Deprecated/Removed/EOS**  |

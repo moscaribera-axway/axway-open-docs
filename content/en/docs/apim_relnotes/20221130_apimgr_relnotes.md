@@ -76,7 +76,7 @@ To allow exporting front-end APIs as plain text, you must set the `com.axway.api
 
 For more information, see [Manage front-end REST API lifecycle, Encryption of exported API collections](/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web#encryption-of-exported-api-collections) and [System property changes, 7.7 November 2022](/docs/apim_reference/system_props#77-november-2022).
 
-### New checkbox in the Advanced (SSL) tab of the Connect To URL filter
+### New option in the Connect To URL filter to enabled legacy renegotiation
 
 There is a new checkbox in the Advanced (SSL) tab of the **Connect To URL** filter. When selected, the checkbox enables unsafe legacy renegotiation, which allows initial SSL connections and renegotiation with servers that do not advertise support for Renegotiation Indication Extension (RFC 5746). For more information, see [Configure SSL settings](/docs/apim_policydev/apigw_polref/routing_common#configure-ssl-settings).
 
