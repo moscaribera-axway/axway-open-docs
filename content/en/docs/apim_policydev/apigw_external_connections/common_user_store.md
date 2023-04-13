@@ -29,9 +29,7 @@ Complete the following fields to configure an Axway PassPort repository:
 * **Repository Name**: Enter a descriptive name for this repository.
 * **Hostname**: Enter the host name or IP address of the server running PassPort.
 * **Shared Secret**: Enter the PassPort shared secret. This is specified during PassPort installation.
-* **CSD Name**: Enter the name of the Axway Component Security Descriptor (CSD) file to use when registering with PassPort. Defaults to `csd.xml`.
-
-    {{< alert title="Note" color="primary" >}}The CSD file must be deployed in the API Gateway group's `conf` directory in your API Gateway installation (`INSTALL_DIR/apigateway/groups/GROUP_ID/conf`).{{< /alert >}}
+* **CSD Name**: Enter the name of the Axway Component Security Descriptor (CSD) file to use when registering with PassPort. Defaults to `csd.xml`. The CSD file must be deployed in the API Gateway group's `conf` directory in your API Gateway installation (`INSTALL_DIR/apigateway/groups/GROUP_ID/conf`).
 
 * **PassPort Certificates—HTTPS**: Select the certificate used for PassPort SSL communication. To export this certificate from PassPort, perform the following steps:
 
@@ -68,7 +66,7 @@ port values are used. While the CSR is pending, the repository is unable to proc
 
 When registration is complete, the key and signed certificate are stored in a Java Key Store file in the following directory of your API Gateway installation:
 
-```
+```bash
 INSTALL_DIR/apigateway/groups/GROUP_ID/conf
 ```
 
@@ -78,13 +76,13 @@ In the unlikely event that automatic registration fails, you should check the fo
 
 Ensure the time on the API Gateway is synchronized with the time on the PassPort machine. When PassPort processes the CSR, it sets the **Valid From** date to the current time. If the PassPort time is ahead of the API Gateway time, the API Gateway is unable to use the certificate because it is not yet valid. The error in the trace log is as follows:
 
-```
+```bash
 java.security.cert.CertificateNotYetValidException:java.security.cert.CertificateNotYetValidException
 ```
 
-By default, PassPort blocks for up to 2 seconds waiting for the CSR to be processed. You can configure this value in the PassPort administration user interface under **Administration** > **System Properties** (`am.registration.cert.signature.wait.time`). If the signing request takes longer than this, one of the following errors may be logged:
+By default, PassPort blocks for up to two seconds waiting for the CSR to be processed. You can configure this value in the PassPort administration user interface under **Administration** > **System Properties** (`am.registration.cert.signature.wait.time`). If the signing request takes longer than this, one of the following errors may be logged:
 
-```
+```none
 Authentication exception when authenticating system:
 com.axway.passport.am.api.v2.service.external.PassportConnectionException:Registration is still in progress.
 Certificate Signing Request has not yet been validated, please try again later.
@@ -99,7 +97,7 @@ This is generally a transient error that may be generated when the initial regis
 
 If the registration request has been refused by the PassPort administrator, the following error is displayed:
 
-```
+```none
 Registration has been refused.
 Please contact the PassPort Administrator for further information.
 [Status:Validation Refused]
@@ -107,7 +105,7 @@ Please contact the PassPort Administrator for further information.
 
 If CSR processing fails for some other reason, the following error is logged:
 
-```
+```none
 Registration has failed and API Gateway is unable to communicate with PassPort.
 Please contact the PassPort Administrator or try manually re-triggering registration.
 [Status:...]
@@ -123,7 +121,7 @@ The simplest way to retrigger registration is to change the repository name and 
 
 The format of the JKS file names is as follows:
 
-```
+```none
 keystore_REPOSITORYNAME_HOSTNAME_HTTPSCLIENTAUTHPORT.jks
 ```
 
@@ -145,7 +143,7 @@ To trigger registration, perform the following steps:
 
 If registration has not been completed when the registration is being retriggered, you must delete the following additional temporary files to ensure clean registration:
 
-```
+```none
 keystore_REPOSITORYNAME_HOSTNAME_HTTPSCLIENTAUTHPORT.jks.csrid
 keystore_REPOSITORYNAME_HOSTNAME_HTTPSCLIENTAUTHPORT.jks.pub
 keystore_REPOSITORYNAME_HOSTNAME_HTTPSCLIENTAUTHPORT.jks.key
@@ -176,8 +174,7 @@ API Gateway can store its authentication repository in an external database. Thi
 To authenticate users against a database repository, right-click **Database Repositories**, and select **Add a new Repository**. Complete the following fields on the Authentication Repository dialog:
 
 **Repository Name**:
-Enter an appropriate name for the database in the **Repository Name**
-field.
+Enter an appropriate name for the database in the **Repository Name** field.
 
 **Database**:
 There are two basic configuration items required to retrieve a user's profile from the database:
@@ -195,7 +192,7 @@ If the user sends up a clear-text password to API Gateway, but that user's passw
 * **Hash Format**:
     If you have selected to hash the client's password, you must specify the format of the hashed password. The most typical formats have been listed, but you can also enter another format. Formats should be entered in terms of message attribute selectors. The following formats are available from the **Hash Format** list.
 
-    ```
+    ```none
     ${authentication.subject.id}:${authentication.subject.realm}:${authentication.subject.password}
     ${authentication.subject.password}
     ```
@@ -368,8 +365,6 @@ To authenticate and authorize users against an OES 10g repository, right-click *
 * **Oracle SSM Settings**: Click **Configure** to launch the **Oracle Security Service Module Settings** dialog. For details on configuring these settings, see [Configure Oracle Security Service Module settings (10g)](/docs/apim_policydev/apigw_poldev/security_server_settings#configure-oracle-security-service-module-settings-10g).
 
 ## RADIUS repositories
-
-{{< alert title="Note" color="primary" >}}This feature has been deprecated and will be removed in a future release.{{< /alert >}}
 
 You can configure API Gateway to authenticate users in a Remote Authentication Dial In User Service (RADIUS) repository. RADIUS is a client-server network protocol that provides centralized authentication and authorization for clients connecting to remote services.
 
