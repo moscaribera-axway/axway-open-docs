@@ -396,10 +396,6 @@ To authenticate users against an RSA Access Manager repository, right-click **RS
     * LDAP
     * Certificate Distinguished Name
 
-## Sun Access Manager repositories
-
-{{< alert title="Note" color="primary" >}}This feature has been deprecated and will be removed in a future release. See [Oracle Access Manager repositories](#oracle-access-manager-repositories) instead.{{< /alert >}}
-
 ## Tivoli repositories
 
 API Gateway can integrate with Tivoli Access Manager to authenticate users. To authenticate users against a Tivoli repository, right-click **Tivoli Repositories**, and select **Add a new Repository**.
