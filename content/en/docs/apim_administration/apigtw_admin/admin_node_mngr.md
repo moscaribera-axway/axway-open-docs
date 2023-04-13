@@ -341,7 +341,7 @@ This command uses the `--sign_with_generated` option by default. It regenerates 
 
 After regenerating certificates, you must reboot the Node Manager and API Gateway instances on the local machine.
 
-{{< alert title="Tip" color="primary" >}}
+{{< alert title="Tip" color="secondary" >}}
 When you regenerate certificates on the first Admin Node Manager, a Node Manager or API Gateway does not need to be running. When you regenerate certificates on subsequent hosts, the Admin Node Manager holding the CA key must be running because it is used to sign the certificates. This applies only for system-generated CA keys.
 {{< /alert >}}
 
