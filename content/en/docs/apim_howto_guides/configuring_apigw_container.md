@@ -12,7 +12,7 @@ The downloaded Admin Node Manager, API Gateway, and Analytics images are built w
 
 The API Gateway image is built with the YAML configuration by default but it can be updated with *.fed, or vice-versa, by externalizing the deployment package (fed or YAML) as outlined in [Sample container configurations](/docs/apim_howto_guides/configuring_apigw_container#sample-container-configurations).
 
-You can also deploy API Gateway using a helm chart. For more information see, [Deploy API Gateway using Helm](/docs/apim_installation/apigw_containers/container_helm_deployment/).
+You can also deploy API Gateway using a helm chart. For more information see, [Deploy API Gateway using Helm](/docs/apim_installation/apigw_containers/deployment_flows/axway_image_deployment/helm_deployment/).
 
 The following sections describe how to deploy API Gateway using Axway images.
 
